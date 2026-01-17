@@ -1,0 +1,47 @@
+services:
+  # Backend Flask service
+  backend:
+    build:
+      context: ./jo-enmedia-flask-app/server
+      dockerfile: Dockerfile
+    container_name: jo-enmedia-backend
+    ports:
+      - "8080:8080"
+    environment:
+      - PORT=8080
+      - FLASK_ENV=production
+      # Allow access from frontend Docker container
+      - ORIGIN=http://localhost:3000,http://frontend:80,http://localhost:80
+    # volumes:
+    #   # Development mode: uncomment to enable hot reload
+    #   - ./jo-enmedia-flask-app/server/src:/app/src
+    restart: unless-stopped
+    networks:
+      - jo-enmedia-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  # Frontend React service
+  frontend:
+    build:
+      context: ./TK-Plus/tk-plus
+      dockerfile: Dockerfile
+      args:
+        - REACT_APP_API_URL=http://localhost:8080
+    container_name: jo-enmedia-frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      backend:
+        condition: service_healthy
+    restart: unless-stopped
+    networks:
+      - jo-enmedia-network
+
+networks:
+  jo-enmedia-network:
+    driver: bridge

@@ -1,0 +1,5 @@
+flask==3.0.3
+flask_cors==5.0.0
+flask_jwt_extended==4.6.0
+flask_mail==0.10.0
+gunicorn

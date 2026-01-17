@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>TK PLUS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="contact.css">
+    <script src="dorpdown.js"></script>
+</head>
+
+<body>
+    <header class="mobile-header">
+        <!-- Logo linking to index.html -->
+        <div class="dropdown">
+            <div class="logo-wrapper">
+                <a href="index.html" id="logo"><img src="images/logo_text.jpg" alt="TK Plus Logo" ></a>
+            </div>
+            
+            
+            <button onclick="toggleDropdown()" class="dropbtn">
+                <img src="images/menu_icon.png" alt="Menu" class="menu-image">
+            </button>
+
+        </div>
+
+        <div id="dropdownMenu" class="dropdown-content">
+            <div class="dorpdown-content-links-wrapper">
+                <br>
+                <br>
+                <a href="about.html">About Us</a>
+                <a href="full_domain.html" class="extended-text">Full Domain Content Marketing</a>
+                <!-- <a href="platform_integrated_marketing.html" class="extended-text">Platform Integrated Marketing</a> -->
+                <a href="short_video_content_production.html" class="extended-text">Short Video + Live Broadcast Content Production</a>
+                <a href="short_video_platform_operation.html" class="extended-text">Short Video Platform Operation</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pc-main">
+        <h1 class="contact-title">Contact Us</h1>
+        <section class="contact-section">
+            <div class="contact-form">
+                <h2>Get in Touch</h2>
+                <form onsubmit="sendEmail(); reset(); return false;">
+                    <input type="text" id="name" placeholder="Your Name" required><br><br>
+                    <input type="email" id="email" placeholder="Your Email" required><br><br>
+                    <input type="tel" id="phone" placeholder="Your Phone Number"><br><br>
+                    <textarea id="message" placeholder="Your Message" rows="6" required></textarea><br><br>
+                    <input type="submit" value="Send Message">
+                </form>
+            </div>
+
+            <div class="contact-info">
+                <div>
+                    <h2>Address</h2>
+                    <p>Sydney -- 2203, 233 castlereagh st, sydney, 2000</p>
+                </div>
+                <div>
+                    <h2>Email</h2>
+                    <p>info@jo-enmedia.com, curtis@jo-enmedia.com</p>
+                </div>
+                <div>
+                    <h2>Phone</h2>
+                    <p>+61 402 530 666 -- Curtis Chi</p>
+                </div>
+            </div>
+        </section>
+        <script src="https://smtpjs.com/v3/smtp.js">
+        </script>
+        <script>
+            function sendEmail(){
+                Email.send({
+                    Host : "smtp.elasticemail.com",
+                    Username : "justinycareer@gmail.com",
+                    Password : "FBB87DDE9ACAF8531DD469E77E81A28D9785",
+                    To : 'info@jo-enmedia.com',
+                    From : "justinycareer@gmail.com",
+                    Subject : "TK Plus enquiry",
+                    Body : "Name: " + document.getElementById("name").value
+                        + "<br> Email: " + document.getElementById("email").value
+                        + "<br> Phone no: " + document.getElementById("phone").value
+                        + "<br> Message: " + document.getElementById("message").value
+                }).then(
+                message => alert(message)
+                );
+            }
+        </script>
+    </main>
+
+    <main class="mobile-main">
+        <h1 class="contact-title">Contact Us</h1>
+        <section class="contact-section">
+            <div class="contact-form">
+                <h2>Get in Touch</h2>
+                <form onsubmit="sendEmail(); reset(); return false;">
+                    <input type="text" id="name" placeholder="Your Name" required><br><br>
+                    <input type="email" id="email" placeholder="Your Email" required><br><br>
+                    <input type="tel" id="phone" placeholder="Your Phone Number"><br><br>
+                    <textarea id="message" placeholder="Your Message" rows="6" required></textarea><br><br>
+                    <input type="submit" value="Send Message">
+                </form>
+            </div>
+
+            <div class="contact-info">
+                <div>
+                    <h2>Address</h2>
+                    <p>Sydney -- 2203, 233 castlereagh st, sydney, 2000</p>
+                </div>
+                <div>   
+                    <h2>Email</h2>
+                    <p>info@jo-enmedia.com, curtis@jo-enmedia.com</p>
+                </div>
+                <div>
+                    <h2>Phone</h2>
+                    <p>+61 402 530 666 -- Curtis Chi</p>
+                </div>
+            </div>
+        </section>
+        <script src="https://smtpjs.com/v3/smtp.js">
+        </script>
+        <script>
+            function sendEmail(){
+                Email.send({
+                    Host : "smtp.elasticemail.com",
+                    Username : "justinycareer@gmail.com",
+                    Password : "FBB87DDE9ACAF8531DD469E77E81A28D9785",
+                    To : 'info@jo-enmedia.com',
+                    From : "justinycareer@gmail.com",
+                    Subject : "TK Plus enquiry",
+                    Body : "Name: " + document.getElementById("name").value
+                        + "<br> Email: " + document.getElementById("email").value
+                        + "<br> Phone no: " + document.getElementById("phone").value
+                        + "<br> Message: " + document.getElementById("message").value
+                }).then(
+                message => alert(message)
+                );
+            }
+        </script>
+    </main>
+
+    <footer class="mobile-footer">
+        <div class="footer-dropdown">
+            <button onclick="toggleFooterDropdown('subdropMenu3')" class="foot-sub-dropbtn">About+</button>
+            <div id="subdropMenu3" class="footer-sub-dropdown-content">
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+        </div>
+        <div class="footer-dropdown">
+            <button onclick="toggleFooterDropdown('subdropMenu4')" class="foot-sub-dropbtn">Services+</button>
+            <div id="subdropMenu4" class="footer-sub-dropdown-content">
+                <a href="full_domain.html" class="extended-text">Full Domain Content Marketing</a>
+                <!-- <a href="platform_integrated_marketing.html" class="extended-text">Platform Integrated Marketing</a> -->
+                <a href="short_video_content_production.html" class="extended-text">Short Video + Live Broadcast Content Production</a>
+                <a href="short_video_platform_operation.html" class="extended-text">Short Video Platform Operation</a>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2023 TK Plus - All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <footer class="pc-footer">
+        <div class="footer-links">
+            <div class="column">
+                <h4>About</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="full_domain.html" class="extended-text">Full Domain Content Marketing</a></li>
+                    <!-- <li><a href="platform_integrated_marketing.html" class="extended-text">Platform Integrated Marketing</a></li> -->
+                    <li><a href="short_video_content_production.html" class="extended-text">Short Video + Live Broadcast Content Production</a></li>
+                    <li><a href="short_video_platform_operation.html" class="extended-text">Short Video Platform Operation</a></li>
+                </ul>
+            </div>
+            <!-- Add more columns with different categories if required -->
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 TK Plus - All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

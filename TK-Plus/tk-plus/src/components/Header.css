@@ -1,0 +1,67 @@
+.pc-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.25em;
+    padding: 0 5%;
+    padding-top: 3%;
+}
+
+.logo-wrapper {
+    /* padding-right: 1000px; */
+    /* change to flex alignment */
+    justify-content: start;
+}
+
+.button-section {
+    justify-content: end;
+}
+.cta-button-contact {
+    text-decoration: none;
+    color: white;
+    background-color: #0000FF; /* This is the blue color from your buttons */
+    padding: 10px 30px;
+    border-radius: 30px;
+    font-weight: bold;
+    margin-left: 30px;
+}
+
+.cta-button-h {
+    text-decoration: none;
+    color: #737373;
+    padding: 10px 20px;
+    font-weight: bold;
+    margin-left: 30px;
+}
+
+.active {
+    color: #2500FF;
+}
+
+/* Mobile Styles (up to 767px) */
+@media only screen and (max-width: 767px) {
+    .pc-header {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: flex-start; /* Align items to the left */
+        padding: 5% 10%; /* Increase padding for mobile */
+    }
+
+    .logo-wrapper {
+        justify-content: center; /* Center the logo */
+        width: 100%; /* Make the logo container full width */
+        margin-bottom: 15px; /* Add space below the logo */
+    }
+
+    .button-section {
+        justify-content: center; /* Center the button section */
+        width: 100%; /* Make the button section full width */
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: center; /* Center the buttons */
+    }
+
+    .cta-button-contact, .cta-button-h {
+        margin-left: 0; /* Remove left margin */
+        margin-bottom: 15px; /* Add space between buttons */
+        width: 100%; /* Make buttons full width */
+        text-align: center; /* Center the text inside buttons */
+    }
+}

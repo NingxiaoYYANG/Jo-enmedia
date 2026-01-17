@@ -1,0 +1,14 @@
+# 根目录 Docker 忽略文件
+.git
+.gitignore
+.DS_Store
+*.log
+node_modules
+.env
+.env.local
+*.zip
+.vscode
+.idea
+*.swp
+*.swo
+*~

@@ -1,0 +1,265 @@
+.about-section {
+    padding: 0px 20px;
+    color: #1800ff;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 350px;
+}
+
+.about-section h2{
+    font-size: 1.1em;
+    text-align: left;
+    line-height: 1.2;
+    font-weight: 800;
+    padding-bottom: 30px;
+}
+
+.about-section p{
+    font-size: 1.1em;
+    text-align: left;
+    line-height: 1.2;
+    font-weight: 650;
+}
+
+.media-logo-container{
+    width: 60%;
+}
+.about-description-section{
+    width: 40%;
+    padding-left: 7%;
+    padding-bottom: 20px;
+}
+
+.about-engine {
+    display:flex;
+    align-content: space-around;
+    padding-bottom: 300px;
+}
+
+.about-engine h1 {
+    padding-left: 10px;
+    font-size: 6em;
+    text-align: left;
+    line-height: 1.2;
+    font-weight: 600;
+    max-width: 600px;
+    padding-right: 150px;
+}
+.about-engine h2 {
+    font-size: 1.25em;
+    font-weight: 700;
+    line-height: 1.2;
+
+}
+.about-engine h3 {
+    font-size: 1.25em;
+    font-weight: bold;
+    margin: 0;
+}
+
+.not-end-p {
+    font-size: 1.25em;
+    font-weight: 640;
+    line-height: 1.1;
+    text-align: left;
+    margin: 0;
+    padding-bottom: 25px;
+}
+
+.end-p {
+    font-size: 1.25em;
+    font-weight: 640;
+    line-height: 1.1;
+    text-align: left;
+    margin: 0;
+    padding-bottom: 0px;
+}
+
+
+
+.about-engine-chart {
+    display: flex;
+    justify-content: normal;
+    width: 100%;
+}
+
+/* Column Styling */
+.chart-column {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: left;
+}
+
+.column-bar{
+    padding-left: 10%;
+    border-left: 1.5px solid #2500ff;
+}
+
+.about-MCN{
+    display: flex;
+    align-items: center;
+}
+.about-MCN img{
+    display: flex;
+    width: 60%;
+}
+
+.about-MCN-text{
+    font-size: 1em;
+    text-align: left;
+    padding-left: 150px;
+}
+.about-MCN-text h2{
+    font-size: 6em;
+    font-weight: 600;
+    line-height: 1.2;
+    text-align: right;
+    padding-bottom: 100px;
+}
+.about-MCN-text h3{
+    font-size: 1.25em;
+    text-align: right;
+    padding-left: 30%;
+    font-weight: 700;
+    padding-bottom: 200px;
+}
+.about-MCN-text p{
+    font-size: 1.25em;
+    text-align: right;
+    line-height: 1.2;
+    padding-bottom: 10%;
+    font-weight: 600;
+    padding-left: 27%;
+}
+
+/* Mobile Styles (up to 767px) */
+@media only screen and (max-width: 767px) {
+    .about-section {
+        flex-direction: column; 
+        align-items: flex-start; 
+        padding-bottom: 40px; /* Reduce bottom padding */
+    }
+
+    .about-description-section{
+        width: 40%;
+        padding-left: 7%;
+        padding-bottom: 0px;
+    }
+
+    .about-section h2{
+        font-size: 0.58em;
+        text-align: left;
+        padding-bottom: 15px;
+        padding-top: 25px;
+        line-height: 1.5;
+        font-weight: 800;
+        padding-bottom: 20px;
+    }
+    
+    .about-section p{
+        font-size: 0.6em;
+        text-align: left;
+        line-height: 1.5;
+        font-weight: 700;
+        padding-bottom: 5px;
+    }
+    
+    .about-engine h1 {
+        font-size: 1em; /* Adjust font size */
+        padding-right: 0; /* Remove right padding */
+        margin-left: 7px;
+        text-align: left; /* Center text */
+    }
+    .about-engine h2 {
+        font-size: 0.7em; /* Adjust font size */
+        padding-right: 0; /* Remove right padding */
+        margin-left: 7px;
+        margin-bottom: 10px;
+        text-align: left; /* Center text */
+    }
+
+    .about-engine h3{
+        font-size: 0.7em;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+    .about-engine p {
+        font-size: 0.6em; /* Adjust font size */
+        padding-right: 0; /* Remove right padding */
+        margin-left: 7px;
+        text-align: left; /* Center text */
+    }
+
+    .media-logo-container, .about-description-section {
+        width: 100%; /* Make sections full width */
+        padding-left: 0; /* Remove padding */
+    }
+
+    .about-engine {
+        flex-direction: column; /* Stack elements vertically */
+        padding-bottom: 50px; /* Reduce bottom padding */
+        margin: 5px;
+    }
+
+    /* Column Styling */
+    .chart-column {
+        padding-right: 90px;
+        width: 100%;
+        text-align: left;
+    }
+
+    .column-bar{
+        padding-left: 10%;
+        border-left: 1.5px solid #2500ff;
+    }
+    
+    .about-engine-chart {
+        flex-direction: column; /* Stack elements vertically */
+    }
+
+    .about-MCN {
+        flex-direction: column; /* Stack elements vertically */
+        padding: 20px; /* Adjust padding */
+    }
+
+    .about-MCN img {
+        width: 120%; /* Make image full width */
+        padding-right: 0; /* Remove right padding */
+        margin-bottom: 20px; /* Add margin below the image */
+    }
+
+    .about-MCN-text {
+        font-size: 1em;
+        padding-left: 0; /* Remove left padding */
+        text-align: center; /* Center text */
+    }
+
+    .about-MCN-text h2{
+        font-size: 1.7em;
+        font-weight: 600;
+        line-height: 1.2;
+        text-align: right;
+        padding-left: 20%;
+        padding-bottom: 20px;
+        padding-top: 10px;
+    }
+    .about-MCN-text h3{
+        font-size: 0.7em;
+        text-align: right;
+        line-height: 20px;
+        font-weight: bold;
+        padding-bottom: 200px;
+        padding-left: 5%;
+    }
+    .about-MCN-text p{
+        font-size: 0.7em;
+        text-align: right;
+        line-height: 1.2;
+        padding-bottom: 10px;
+        font-weight: 600;
+        padding-left: 17%;
+    }
+}

@@ -1,0 +1,228 @@
+/* Work.css */
+body {
+    margin: 5% 5%;
+    padding-left: 2%;
+    background-color: #fff;
+    color: #000;
+}
+
+.key-examples {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    margin: 20px;
+}
+
+.key-examples-left {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center; /* Center horizontally */
+    height: 100%; /* Make sure the container takes up full height */
+    position: relative; /* Set to relative for absolute positioning of children */
+}
+
+.key-examples-row {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    margin-bottom: 5%; /* Increase space between rows */
+}
+
+.image-logo-container {
+    text-align: center;
+    width: 100%;
+}
+
+.image-logo-container img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.title {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.key-examples img {
+    width: 50%;
+}
+
+.key-examples-left img {
+    width: 100%;
+    max-width: 500px;
+    margin: 10% 20% 0 0; /* top | right | bottom | left */
+    height: auto;
+    border: none; /* Remove border */
+    outline: none; /* Remove outline */
+}
+
+.key-examples p {
+    margin-top: 20px;
+    line-height: 1.6;
+    width: 85%;
+}
+
+.key-examples-left p {
+    text-align: left; /* Align text to the left */
+    margin: 0; /* Reset margin if needed */
+    padding: 0; /* Reset padding if needed */
+}
+
+.brand-marketing {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end; /* Align items to the bottom */
+    margin: 40px 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.example-montage img {
+    width: 100%;
+    max-width: none;
+}
+
+.brand-marketing-text {
+    max-width: 800px;
+    width: 30%;
+    padding-right: 6%;
+    padding-left: 2%;
+}
+
+.brand-marketing-text h1 {
+    font-size: 24px;
+    margin-top: 0;
+    text-align: left;
+}
+
+.brand-marketing-text p {
+    font-size: 16px;
+    margin: 10px 0;
+    line-height: 1.2;
+    text-align: left;
+}
+
+.example-slider {
+    margin: 10% 10%;
+    background-color: #f0f0f0;
+}
+
+.brand-logos {
+    margin: 40px 20px;
+}
+
+.brand-logo-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.brand-logo-row img {
+    max-width: 30%;
+    height: 50%;
+}
+.brand-logos h1 {
+    margin-bottom: 5%;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 0;
+}
+
+p {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.mobile-body {
+    display: none;
+}
+
+.pc-body {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .pc-body {
+        display: none;
+    }
+
+    .mobile-body {
+        display: block;
+    }
+
+    .key-examples {
+        flex-direction: column;
+        margin: 0px;
+    }
+
+    .key-examples img {
+        width: 100%;
+        padding-bottom: 10%;
+    }
+
+    .key-examples-left img {
+        max-width: 130px;
+        margin: 0;
+        padding-bottom: 0%;
+    }
+
+    .title {
+        color: #1800FF;
+        font-size: 12px;
+        margin-top: 0px;
+        font-weight: 400;
+    }
+
+    .brand-marketing {
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .brand-marketing-text {
+        max-width: 350px;
+        width: 100%;
+        padding: 5%;
+    }
+    
+    .brand-marketing-text h1 {
+        font-size: 16px;
+        font-weight: 600;
+        margin-top: 10px;
+        text-align: left;
+    }
+    
+    .brand-marketing-text p {
+        font-size: 14px;
+        margin: 0;
+        line-height: 1.2;
+        font-weight: 400;
+        text-align: left;
+    }
+
+    .brand-logos {
+        margin: 13% 18%;
+        padding-top: 5%;
+    }
+
+    .brand-logo-row {
+        margin: 20px 0;
+        align-items: center;
+    }
+    
+    .brand-logo-row img {
+        max-width: 120px;
+    }
+
+    .brand-logos h1 {
+        margin: 10% 0;
+    }
+}
